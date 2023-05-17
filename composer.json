@@ -1,5 +1,5 @@
 {
-    "name": "kletellier/laravel-random",
+    "name": "kletellier/lara-random",
     "description": "Laravel wrapper for ircmaxell/RandomLib",
     "type": "library",
     "require": {
