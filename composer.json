@@ -1,0 +1,46 @@
+{
+    "name": "kletellier/laravel-random",
+    "description": "Laravel wrapper for ircmaxell/RandomLib",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "ircmaxell/random-lib": "^1.2",
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.1",
+        "orchestra/testbench": "^8.5",
+        "nunomaduro/collision": "^7.4"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kletellier\\Random\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Kletellier\\Random\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "Kletellier\\Random\\RandomServiceProvider"
+          ],
+          "aliases": {
+            "Random": "Kletellier\\Random\\RandomFacade"
+          }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "authors": [
+        {
+            "name": "Gregory Letellier",
+            "email": "gregory_letellier@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
