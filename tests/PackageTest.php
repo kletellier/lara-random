@@ -44,4 +44,18 @@ class PackageTest extends \Orchestra\Testbench\TestCase
         $this->assertEquals($length,strlen($str));
         $this->assertIsString($str);
     }
+
+    public function testConfiguration()
+    { 
+        $this->app['config']->set('random.strength', "high");
+        $int = \Random::generateInt(0,100);
+        $this->assertIsNumeric($int);
+        $this->assertGreaterThanOrEqual(0,$int);
+        $this->assertLessThanOrEqual(100,$int);
+        $this->app['config']->set('random.strength', "low");
+        $int = \Random::generateInt(0,100);
+        $this->assertIsNumeric($int);
+        $this->assertGreaterThanOrEqual(0,$int);
+        $this->assertLessThanOrEqual(100,$int);
+    }
 }
